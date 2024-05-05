@@ -1,3 +1,7 @@
+# Project Summary
+
+# Data model
+
 # Instruction
 
 1 เข้า Folder Capstone-project เพื่อสร้าง project 
