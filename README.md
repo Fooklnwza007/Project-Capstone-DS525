@@ -1,4 +1,4 @@
-# Project Summary
+![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/eae04d58-ada9-49b4-bbfe-cc6d70393556)# Project Summary
 
 # Data model
 
@@ -144,9 +144,20 @@ docker compose up
 
 ![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/7ad2ddd3-8378-4a09-bafd-ba507adbf732)
 
-13. Transform สร้างตารางใหม่ เพื่อนำไป Transform ตาราง olist_obt ด้วย DBT ในภายหลัง
+13. Transform สร้างตารางใหม่ brazil_state เพื่อนำไป Transform สร้างตาราง olist_obt ด้วย DBT ในภายหลัง และมีการปรับตาราง product_category_name_translation
+    ให้ชื่อคอลัมน์มีความสอดคล้องกับข้อมูลมากขึ้น โดยการเปลี่ยนชื่อคอลัมน์ string_field_0 เป็น product_category_name และ string_field_1 เป็น product_category_name_english
+    และลบ row ที่ 1 ออก เนื่องจากเป็นชื่อหัวตารางคอลัมน์
 
 ![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/945570e5-c4c3-49ac-9bfb-3b168d482642)
+
+![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/0fd09ec3-50dd-4942-ab52-adc927b7ad5c)
+
+![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/f2491200-1068-4a3a-a614-beb8ff4d38ba)
+
+![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/88d90969-cb4d-4057-b2ed-4f25ba0d34e8)
+
+![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/44194924-f8fb-4ce2-be72-f34325b02a4d)
+
 
 14. Download library dbt-core dbt-bigquery เพื่อให้สามารถใช้งานเครื่องมือ dbt และใช้ dbt ที่เชื่อมต่อกับ bigqueryได้
 ```sh
@@ -234,7 +245,10 @@ dbt test
 ```sh
 dbt run
 ```
+![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/6088801e-9a55-4a12-9175-1b0272cb16cf)
 
+27. โครงสร้าง .sql ที่สร้างไว้จะถูกนำขึ้นบน Google bigquery ที่เชื่อมต่อ โดยจะแสดงบน datasets : dbt_olist และมี 1 tables : olist_obt
+    และ 3 views : view_delivery_performance, view_sale_performance, view_seller_performance ซึ่งเป็นข้อมูลที่เกี่ยวข้องในการวิเคราะห์และสร้าง Dashboard บน Tableau
 ![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/9ff0a242-2d26-4afe-b753-193610c51ac8)
 
 ![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/381ef4bd-c75e-477d-a1aa-4fd9a3bee009)
