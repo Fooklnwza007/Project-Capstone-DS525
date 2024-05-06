@@ -1,4 +1,4 @@
-![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/eae04d58-ada9-49b4-bbfe-cc6d70393556)# Project Summary
+# Project Summary
 
 # Data model
 
