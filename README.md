@@ -5,7 +5,8 @@
 # Instruction
 
 1. สร้าง Folder Capstone แล้วเข้าไปยัง Working directory Capstone
-```shะ
+```sh
+
 cd Capstone-project
 ```
 
@@ -41,7 +42,7 @@ docker compose up
 
 5. สร้าง Project และ key สำหรับ Capstone project บน Google cloud เปิดสิทธิ์ให้สามารถเชื่อมต่อได้ทั้ง Google Cloud Storage (GCS) และ Google Bigquery
 
-5.1 สร้าง Project และ Key บน Google Cloud
+   5.1 สร้าง Project และ Key บน Google Cloud
 
 ![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/6c91c915-216c-4210-b9b1-9b97fe658ad2)
 
@@ -65,17 +66,17 @@ docker compose up
 
 ![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/bbae9f90-6f20-4f88-b9bd-f0da62b2ea28)
 
-5.2 นำไฟล์ JSON มาเก็บไว้ใน Folder ใน code space (ห้ามนำขึ้น Git ให้สร้าง .gitignore) เพื่อนำไปเชื่อมต่อกับ Airflow
+  5.2 นำไฟล์ JSON มาเก็บไว้ใน Folder ใน code space (ห้ามนำขึ้น Git ให้สร้าง .gitignore) เพื่อนำไปเชื่อมต่อกับ Airflow
 
 ![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/c49453b1-281a-4740-a17e-f48a73799cbd)
 
- 5.2.1 การสร้าง .gitignore ให้ใส่ชื่อ Folder หรือชื่อไฟล์ ที่ไม่ต้องการให้ขึ้น git จากตัวอย่างไฟล์บน Folder key จะไม่ถูกนำขึ้น git ชื่อ Folder และ ไฟล์ จะแสดงเป็นสีเทาเข้ม
+   5.2.1 การสร้าง .gitignore ให้ใส่ชื่อ Folder หรือชื่อไฟล์ ที่ไม่ต้องการให้ขึ้น git จากตัวอย่างไฟล์บน Folder key จะไม่ถูกนำขึ้น git ชื่อ Folder และ ไฟล์ จะแสดงเป็นสีเทาเข้ม
 
 ![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/e1d471b6-464c-40f6-9a7a-8259a52e4c51)
 
 
 6. สร้าง Bucket บน Google Cloud Storage ประกอบด้วย 2 Bucket เพื่อใช้ในการเก็บข้อมูล คือ 1. raw_data_projectcapstone (ใช้ในการเก็บ raw data ไม่ต้องการให้ใครมาเปลี่ยน)
-2. storage-capstone
+   2. storage-capstone
 
 (ตัวอย่าง Bucket ชื่อ example_ds525_123)
 
@@ -106,10 +107,8 @@ docker compose up
 
 
 9. การทำ Automated pipeline ด้วย Airflow จะเขียนบน python ไฟล์ etl.py โดยมี Loop ดังนี้
-
-GCS (raw_data_projectcapstone) >> GCS (storage-capstone) >> Google Bigquery
-
-สร้าง DAG เพื่อสร้าง Loop การทำงานบน airflow โดยมีชื่อว่า etl (Dummy Operator จะมีหรือไม่มีก็ได้) สามารถค้นหาบน airflow ได้ด้วย tag = swu
+   GCS (raw_data_projectcapstone) >> GCS (storage-capstone) >> Google Bigquery
+   สร้าง DAG เพื่อสร้าง Loop การทำงานบน airflow โดยมีชื่อว่า etl (Dummy Operator จะมีหรือไม่มีก็ได้) สามารถค้นหาบน airflow ได้ด้วย tag = swu
 
 ![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/3bd6055a-dd64-48a5-b67d-301cadb9886a)
 
@@ -117,7 +116,7 @@ GCS (raw_data_projectcapstone) >> GCS (storage-capstone) >> Google Bigquery
 ![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/301ab360-04c1-436c-a55c-c4a4cc3079d4)
 
 9. สร้าง GCSToGCSOperator เพื่อนำข้อมูลจาก GCS Bucket : raw_data_projectcapstone ที่ทำการ manual ใส่ไฟล์ CSV เข้าสู่ Bucket : storage-capstone
-ข้อมูลทั้ง 2 Bucket ต้องมีไฟล์ csv ที่เหมือนกัน
+   ข้อมูลทั้ง 2 Bucket ต้องมีไฟล์ csv ที่เหมือนกัน
 
 ![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/a1e910e3-5308-4ae5-ba51-2c37787acedc)
 
@@ -138,8 +137,7 @@ GCS (raw_data_projectcapstone) >> GCS (storage-capstone) >> Google Bigquery
 ![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/02f863b9-ee65-4694-a342-f72e3d7c3451)
 
 12. สร้าง Partition table เพื่อให้ข้อมูลสามารถ Query ได้เร็วขึ้น ประกอบด้วย partitioned_olist_items_dataset และ partitioned_olist_orders_dataset
-
-จะมีสัญลักษณะด้านหน้า table ที่ต่างจาก table ปกติ และมีข้อความ This is a partitioned table.
+    จะมีสัญลักษณะด้านหน้า table ที่ต่างจาก table ปกติ และมีข้อความ This is a partitioned table.
 
 ![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/eb661aec-1361-4041-8ada-ea29eebb0ece)
 
@@ -154,70 +152,90 @@ GCS (raw_data_projectcapstone) >> GCS (storage-capstone) >> Google Bigquery
 ```sh
 pip install dbt-core dbt-bigquery
 ```
-![image](https://github.com/Fooklnwza007/dw-and-bi/assets/131597296/388c3fde-5445-43ef-9e2d-d2aaced07fa5)
+![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/3708a370-d2e5-4dc7-b730-65f2fec17409)
 
-
-8. สร้าง project profile dbt ที่สร้างด้วย google bigqeury มีรายละเอียดดังนี้
+15. สร้าง project profile dbt ที่สร้างด้วย google bigqeury มีรายละเอียดดังนี้ (ตัวอย่างคือ projectcapstone1 ใช้งานบน projectcapstone)
 ```sh
 dbt init
 ```
-![image](https://github.com/Fooklnwza007/dw-and-bi/assets/131597296/044f9fea-d1f0-4dc1-adb0-11b21a98a899)
+![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/a406dae5-1980-49d8-8ac3-411b13e8856f)
+
+![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/4fcc01d9-4659-49ce-90e5-c509c7869cf5)
+
+![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/1fa9fcb6-56ca-406d-85d9-4728b1a2f25b)
+
+![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/8f7f4372-c0da-4f3a-bb91-b8e52938fd9e)
+
+![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/a0b9e68b-92e3-4f7d-8ef2-f0159e535c4e)
+
+![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/0b8203b2-90b2-4e8d-8a78-5c4b5a7684e1)
 
 
-
-9. หลังจากสร้าง project profile สร้าง file ใน folder projectcapstone/models ด้วยชื่อ profiles.yml
-และนำข้อมูลทั้งหมดจาก code ด้านล่าง มาใส่ไว้ใน file profiles.yml ที่เราสร้างใน projectcapstone/models 
+16. สร้างไฟล์ profiles.yml บน projectcapstone folder และนำข้อมูลจาก code มาใส่ข้อมูลในไฟล์ profiles.yml ที่สร้างไว้
 ```sh
 code /home/codespace/.dbt/profiles.yml
 ```
+![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/1343918a-5a6c-4b7d-bd93-da527e5865e8)
 
-![image](https://github.com/Fooklnwza007/dw-and-bi/assets/131597296/ba6e6e5d-aee8-4bb7-b315-1f0a352dc7e3)
+![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/e07dd996-d21a-44f2-a395-29f3e446738a)
 
+17. เข้า Directory ที่ต้องการทำงานที่ได้มีการสร้าง profiles
+```sh
+cd projectcapstone
+```
+![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/f1a5191b-6bf8-4734-befb-52e56c79f591)
 
+18. สร้าง Files ใน Folder Capstone-project/projectcapstone/models _src.yml เพื่อเป็นข้อมูลอ้างอิงในการ Transform ข้อมูลด้วย DBT
+    การอ่านข้อมูลของ DBT จะไม่สนโครงสร้างของ Folder
 
-10. ทดสอบการ connection กับ bigquery
+![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/5931f8e0-c803-4e26-a9e4-c54cdf1348d9)
+
+![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/e1bd3c13-008b-4036-918a-ce0ce11c0da3)
+
+19. สร้าง datasets dbt_olist บน Google bigquery เพื่อแยกข้อมูล raw tables กับ transform table ออกจากกัน และป้องกันการแก้ไขข้อมูลหลัก
+
+![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/17acf9f4-d4b2-4ef8-aee4-ed680bd15d46)
+
+20. ทำการแก้ไข profiles.yml จาก datasets order เป็น datasets dbt_olist เพื่อทำงานบน datasets ที่ต้องการสร้าง transform table
+
+![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/52b4499b-f08b-4c29-afa3-e2b3d2be7919)
+ 
+21. ตรวจสอบการเชื่อมต่อ DBT กับ Google Bigquery
 ```sh
 dbt debug
 ```
-![image](https://github.com/Fooklnwza007/dw-and-bi/assets/131597296/8a704531-70ae-45dc-83c7-76ee141d861d)
+![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/c7bcecbb-0066-4f65-815f-e3406c7a6a47)
 
+22. สร้าง .sql เพื่อ Transform ข้อมูล และเลือกคอลัมน์ที่เกี่ยวข้องในการวิเคราะห์จาก table ใน datasets order ที่เป็น raw table โดยสร้าง files ที่ชื่อว่า olist_obt.sql
+    ข้อมูลที่นำมาใช้ในการสร้างต้องอยู่ใน _src.yml (ข้อ 18)
 
+![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/80312282-e60d-4fe6-9328-f2743986fb26)
 
-11. _src.yml ใช้ในการอ้างอิง source data (ที่อยู่บน google biquery) โครงสร้างประกอบด้วย
-project_name = dataengineer-415510, schema = order (datasets), tables = olist_customers_dataset, olist_geolocation_dataset, olist_order_items_dataset, olist_order_payments_dataset, olist_order_reviews_dataset, olist_orders_dataset, olist_products_dataset, olist_sellers_dataset, product_category_name_translation
+23. olist.obt.sql จะเป็น table หลัก ของ table ที่ถูก transform ด้วย DBT เพื่อนำมาใช้ในการอ้างอิงให้กับการสร้าง view ที่ต้องการนำมา reuse
+    view ที่ถูกสร้างควรจะอ้างอิง table หลักของ DBT (olist_obt) จะใช้ {{ ref('olist_obt') }}
 
-![image](https://github.com/Fooklnwza007/dw-and-bi/assets/131597296/c1be77e6-ae62-4803-adf7-7b10191014d6)
+![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/4c485a1f-e915-45d5-b0dc-91ab61480efb)
 
+23. สร้างไฟล์ schema.yml เพื่อใช้ในการเช็คเงื่อนไขการสร้าง tables/views ตัวอย่างคือ การเช็คเงื่อนไขคอลัมน์ order_id ต้องไม่มีค่าว่าง (not null)
 
+![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/afb98402-27c6-40a4-a96d-8a97d9922e85)
 
-
-12. ข้อมูล source tables จะถูกนำมาสร้างเป็น table หลัก เพื่อใช้ในการอ้างอิงในการสร้าง view ตามเงื่อนไขที่ต้องการ และเพื่อป้องกันการเปลี่ยนแปลงของ source tables จาก user 
-สามารถกำหนดการสร้าง view หรือ table ได้จาก dbt_project.yml
-
-![image](https://github.com/Fooklnwza007/dw-and-bi/assets/131597296/c7dcc1c5-120f-4d29-9dc6-adf2c1528ae5)
-
-13. การ transform source data ด้วยการใช้ dbt จะอ่านจากไฟล์ .sql ที่อยู่ใน folder models (การทำงานไม่สนโครงสร้างของ folder) และเช็คเงื่อนไขการสร้าง view/tables จากการ transform จากไฟล์ schema.yml
-
-![image](https://github.com/Fooklnwza007/dw-and-bi/assets/131597296/cbdd893b-b77f-4f6d-9456-82d62fcd8720)
-
-![image](https://github.com/Fooklnwza007/dw-and-bi/assets/131597296/000e40b6-b9c8-4f68-8ef1-e7a332ae5cc9)
-
-
-
-14. จากนั้นรันคำสั่ง test เพื่อเช็ค data quality เพื่อดูเงื่อนไขการ transform ของ view/table ที่สร้างจากไฟล์ schema.yml โดยเงื่อนไขคือ order_id ของ olist_obt tables และ ทั้ง 3 view ต้องไม่มีค่า NULL
+24. ตรวจสอบเงื่อนไขการสร้าง tables/views สอดคล้องกับเงื่อนไขที่ตั้งไว้หรือไม่
 ```sh
 dbt test
 ```
-![image](https://github.com/Fooklnwza007/dw-and-bi/assets/131597296/3c4e9cf3-0361-468c-90f0-62de6ec7e74e)
+![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/19276eed-9244-4992-bf61-9a6eee5c5ff3)
 
+25. สร้าง tables/views ตามไฟล์ .sql และตามเงื่อนไขที่ schema.yml โดยไฟล์ทั้งหมดจะต้องอยู่ใน projectcapstone/models/
+    การอ่านไฟล์ .sql ของ DBT จะอ่านเฉพาะที่อยู่ directory projectcapstone/models/ โดยไม่สนการเรียงลำดับของ folder
+```sh
+dbt run
+```
 
-![image](https://github.com/Fooklnwza007/dw-and-bi/assets/131597296/3701ac35-855d-450b-a104-a0336c175f8c)
+![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/9ff0a242-2d26-4afe-b753-193610c51ac8)
 
+![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/381ef4bd-c75e-477d-a1aa-4fd9a3bee009)
 
-15. ข้อมูลที่ถูก Transform จะถูกนำขึ้น google bigquery โดยมีโครงสร้าง project_name = dataengineer-415510, schema = dbt_olist (datasets), tables = olist_obt (table), view_delivery_performance (view), view_sale_performance (view), view_seller_performance (view)
-ข้อมูลที่เป็น view หรือ table ดูได้จากสัญลักษณ์ด้านหน้า
-
-![image](https://github.com/Fooklnwza007/dw-and-bi/assets/131597296/fbe85b65-9176-4189-bc2d-5287d48648fd)
 
 
  
