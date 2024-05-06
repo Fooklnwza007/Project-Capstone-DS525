@@ -216,17 +216,19 @@ dbt debug
 
 ![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/4c485a1f-e915-45d5-b0dc-91ab61480efb)
 
-23. สร้างไฟล์ schema.yml เพื่อใช้ในการเช็คเงื่อนไขการสร้าง tables/views ตัวอย่างคือ การเช็คเงื่อนไขคอลัมน์ order_id ต้องไม่มีค่าว่าง (not null)
+![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/6488ac0e-3032-452d-b4ce-35729165fc21)
+
+24. สร้างไฟล์ schema.yml เพื่อใช้ในการเช็คเงื่อนไขการสร้าง tables/views ตัวอย่างคือ การเช็คเงื่อนไขคอลัมน์ order_id ต้องไม่มีค่าว่าง (not null)
 
 ![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/afb98402-27c6-40a4-a96d-8a97d9922e85)
 
-24. ตรวจสอบเงื่อนไขการสร้าง tables/views สอดคล้องกับเงื่อนไขที่ตั้งไว้หรือไม่
+25. ตรวจสอบเงื่อนไขการสร้าง tables/views สอดคล้องกับเงื่อนไขที่ตั้งไว้หรือไม่
 ```sh
 dbt test
 ```
 ![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/19276eed-9244-4992-bf61-9a6eee5c5ff3)
 
-25. สร้าง tables/views ตามไฟล์ .sql และตามเงื่อนไขที่ schema.yml โดยไฟล์ทั้งหมดจะต้องอยู่ใน projectcapstone/models/
+26. สร้าง tables/views ตามไฟล์ .sql และตามเงื่อนไขที่ schema.yml โดยไฟล์ทั้งหมดจะต้องอยู่ใน projectcapstone/models/
     การอ่านไฟล์ .sql ของ DBT จะอ่านเฉพาะที่อยู่ directory projectcapstone/models/ โดยไม่สนการเรียงลำดับของ folder
 ```sh
 dbt run
