@@ -14,5 +14,10 @@ sources:
       - name: olist_sellers_dataset
       - name: product_category_name_translation
       - name: olist_customers_dataset
+      - name: partitioned_olist_orders_dataset
+      - name: partitioned_olist_items_dataset
+      - name: brazil_state
+
+
 
       

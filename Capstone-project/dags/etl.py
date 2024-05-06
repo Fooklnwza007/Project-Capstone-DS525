@@ -13,22 +13,6 @@ from airflow.providers.postgres.hooks.postgres import PostgresHook
 import os
 import glob
 
-def _get_files(filepath: str):
-    """
-    Description: This function is responsible for listing the files in a directory
-    """
-
-    all_files = []
-    for root, dirs, files in os.walk(filepath):
-        files = glob.glob(os.path.join(root, "*.csv"))
-        for f in files:
-            all_files.append(os.path.abspath(f))
-
-    num_files = len(all_files)
-    print(f"{num_files} files found in {filepath}")
-
-    return all_files
-
 
 with DAG(
     "etl",
@@ -37,7 +21,7 @@ with DAG(
     tags=["swu"],
 ) as dag:
 
-# Dummy strat task   
+# Dummy start task   
     start = DummyOperator(
         task_id='start',
         dag=dag,

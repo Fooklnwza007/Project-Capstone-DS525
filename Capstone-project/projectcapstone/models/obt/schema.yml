@@ -5,7 +5,7 @@ models:
     description: "transformed table from source data"
     columns:
       - name: order_id
-        description: "The data shouldn't be null"
+        description: "The data order_id shouldn't be null"
         tests:
           - not_null
 
@@ -13,7 +13,7 @@ models:
     description: "data view form olist_obt"
     columns:
       - name: order_id
-        description: "The data shouldn't be null"
+        description: "The data order_id shouldn't be null"
         tests:
           - not_null
 
@@ -21,7 +21,7 @@ models:
     description: "data view form olist_obt"
     columns:
       - name: order_id
-        description: "The data shouldn't be null"
+        description: "The data order_id shouldn't be null"
         tests:
           - not_null
 
@@ -29,6 +29,6 @@ models:
     description: "data view form olist_obt"
     columns:
       - name: order_id
-        description: "The data shouldn't be null"
+        description: "The data order_id shouldn't be null"
         tests:
           - not_null
