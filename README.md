@@ -249,6 +249,7 @@ dbt run
 
 27. โครงสร้าง .sql ที่สร้างไว้จะถูกนำขึ้นบน Google bigquery ที่เชื่อมต่อ โดยจะแสดงบน datasets : dbt_olist และมี 1 tables : olist_obt
     และ 3 views : view_delivery_performance, view_sale_performance, view_seller_performance ซึ่งเป็นข้อมูลที่เกี่ยวข้องในการวิเคราะห์และสร้าง Dashboard บน Tableau
+    
 ![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/9ff0a242-2d26-4afe-b753-193610c51ac8)
 
 ![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/381ef4bd-c75e-477d-a1aa-4fd9a3bee009)
