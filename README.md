@@ -211,12 +211,13 @@ dbt debug
 
 ![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/80312282-e60d-4fe6-9328-f2743986fb26)
 
+![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/6488ac0e-3032-452d-b4ce-35729165fc21)
+
 23. olist.obt.sql จะเป็น table หลัก ของ table ที่ถูก transform ด้วย DBT เพื่อนำมาใช้ในการอ้างอิงให้กับการสร้าง view ที่ต้องการนำมา reuse
     view ที่ถูกสร้างควรจะอ้างอิง table หลักของ DBT (olist_obt) จะใช้ {{ ref('olist_obt') }}
 
 ![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/4c485a1f-e915-45d5-b0dc-91ab61480efb)
 
-![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/6488ac0e-3032-452d-b4ce-35729165fc21)
 
 24. สร้างไฟล์ schema.yml เพื่อใช้ในการเช็คเงื่อนไขการสร้าง tables/views ตัวอย่างคือ การเช็คเงื่อนไขคอลัมน์ order_id ต้องไม่มีค่าว่าง (not null)
 
