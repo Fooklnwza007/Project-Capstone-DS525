@@ -255,7 +255,7 @@ dbt run
 ![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/381ef4bd-c75e-477d-a1aa-4fd9a3bee009)
 
 28. เชื่อมต่อ Tableau กับ Google Bigquery โดยการใช้ key ไฟล์ JSON (ตัวเดียวกันกับที่ใช้เชื่อมต่อ Airflow)
-    https://public.tableau.com/app/profile/suthavee.piyavat/viz/Olist_Dashboard_17149149556140/Dashboard2?publish=yes
+    Dashboard : https://public.tableau.com/app/profile/suthavee.piyavat/viz/Olist_Dashboard_17149149556140/Dashboard2?publish=yes
 
 ![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/83e0059e-12d9-44db-9dbb-047baa4fa522)
 
