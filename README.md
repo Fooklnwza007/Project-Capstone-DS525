@@ -208,6 +208,9 @@ docker compose up
 
 ![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/301ab360-04c1-436c-a55c-c4a4cc3079d4)
 
+![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/dbb28620-dd0b-49ac-8593-34f88b5d320e)
+
+
 <br>
 
 9. สร้าง GCSToGCSOperator เพื่อนำข้อมูลจาก GCS Bucket : raw_data_projectcapstone ที่ทำการ manual ใส่ไฟล์ CSV เข้าสู่ Bucket : storage-capstone
