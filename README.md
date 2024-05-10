@@ -5,7 +5,7 @@
 <br>
 🖍 [Slide Presentation](https://drive.google.com/file/d/1Tn-107B2eAkiYiJEzhyN26lCV3zlrfbx/view?usp=sharing)
 <br>
-🎥 [VDO Presentation]()
+🎥 [VDO Presentation](https://www.youtube.com/watch?v=ySAy6vohcp0)
 
 <br>
 
