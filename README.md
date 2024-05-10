@@ -391,6 +391,11 @@ dbt run
 
 <br>
 
+28. เมื่อทำงานเรียบร้อยแล้ว ควรปิดการทำงานของ docker เพื่อลดปัญหา storage ไม่พอในงานถัดไป
+```sh
+docker compose down
+```
+
 ### Step: Data Visualization
 
 <br>
