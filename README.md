@@ -365,15 +365,7 @@ dbt debug
 
 <br>
 
-25. ตรวจสอบเงื่อนไขการสร้าง tables/views สอดคล้องกับเงื่อนไขที่ตั้งไว้หรือไม่
-```sh
-dbt test
-```
-![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/19276eed-9244-4992-bf61-9a6eee5c5ff3)
-
-<br>
-
-26. สร้าง tables/views ตามไฟล์ .sql และตามเงื่อนไขที่ schema.yml โดยไฟล์ทั้งหมดจะต้องอยู่ใน projectcapstone/models/
+25. สร้าง tables/views ตามไฟล์ .sql และตามเงื่อนไขที่ schema.yml โดยไฟล์ทั้งหมดจะต้องอยู่ใน projectcapstone/models/
     การอ่านไฟล์ .sql ของ DBT จะอ่านเฉพาะที่อยู่ directory projectcapstone/models/ โดยไม่สนการเรียงลำดับของ folder
 ```sh
 dbt run
@@ -381,6 +373,15 @@ dbt run
 ![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/6088801e-9a55-4a12-9175-1b0272cb16cf)
 
 <br>
+
+26. ตรวจสอบเงื่อนไขการสร้าง tables/views สอดคล้องกับเงื่อนไขที่ตั้งไว้หรือไม่
+```sh
+dbt test
+```
+![image](https://github.com/Fooklnwza007/Project-Capstone-DS525/assets/131597296/19276eed-9244-4992-bf61-9a6eee5c5ff3)
+
+<br>
+
 
 27. โครงสร้าง .sql ที่สร้างไว้จะถูกนำขึ้นบน Google bigquery ที่เชื่อมต่อ โดยจะแสดงบน datasets : dbt_olist และมี 1 tables : olist_obt
     และ 3 views : view_delivery_performance, view_sale_performance, view_seller_performance ซึ่งเป็นข้อมูลที่เกี่ยวข้องในการวิเคราะห์และสร้าง Dashboard บน Tableau
