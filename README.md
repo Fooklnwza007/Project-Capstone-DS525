@@ -37,7 +37,7 @@
 projectcapstone </i> 
 * Airflow Automate ดึงข้อมูลจาก Bucket #1 ไปยัง <i> Bucket #2 storage-capstone </i> จากนั้นจึงนำข้อมูลจาก GCS Bucket #2 ไปเข้า Data Warehouse ที่ Google Big Query 
 * ทำการ Transform ข้อมูลเพื่อให้พร้อมใช้งานบน Visualization Tools
-* Apache Airflow เป็น Open-source ในการทำ Orchestration ซึ่งจะทำการติดตั้งด้วยการใช้ Docker [Document For Running Airflow in Docker](https://www.youtube.com/watch?v=ySAy6vohcp0) ซึ่งผลลัพธ์ที่ได้จะให้ไฟล์ docker-compose.yaml ในการ run web server apache airflow ที่ port : 8080
+* Apache Airflow เป็น Open-source ในการทำ Orchestration ที่ใช้ในการทำ Automated ซึ่งจะทำการติดตั้งด้วยการใช้ Docker [Document For Running Airflow in Docker](https://www.youtube.com/watch?v=ySAy6vohcp0) ซึ่งผลลัพธ์ที่ได้จะให้ไฟล์ docker-compose.yaml ในการ run web server apache airflow ที่ port : 8080
 
 <br>
 
